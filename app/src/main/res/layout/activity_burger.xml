@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context="com.example.riza.projekiak.burgerActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pilihBurger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pilih_burger"
+            android:textSize="@dimen/textSize"
+
+            android:textColor="@color/cardview_dark_background"
+            />
+
+        <TextView
+            android:id="@+id/hargaTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Harga Total"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorPrimaryDark"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <CheckBox
+                android:onClick="isChecked"
+                android:layout_marginTop="3dp"
+                android:id="@+id/cb_burgerSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/burger_small_rp_25_000"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="9dp"
+                />
+
+            <CheckBox
+                android:onClick="isChecked"
+                android:id="@+id/cb_burgerMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/burger_medium_rp_30_000"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <CheckBox
+                android:onClick="isChecked"
+                android:id="@+id/cb_burgerBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/burger_big_rp_40_000"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:onClick="tambahBurgerSmall"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        />
+                    <TextView
+                        android:id="@+id/jmlTampil"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:text="1"
+                        android:gravity="center"
+                        />
+                    <Button
+                        android:onClick="kurangBurgerSmall"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:onClick="tambahBurgerMedium"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        />
+                    <TextView
+                        android:id="@+id/jmlTampilMedium"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:text="1"
+                        android:gravity="center"
+                        />
+                    <Button
+                        android:onClick="kurangBurgerMedium"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:onClick="tambahBurgerBig"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        />
+                    <TextView
+                        android:id="@+id/jmlTampilBig"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:text="1"
+                        android:gravity="center"
+                        />
+
+                    <Button
+                        android:onClick="kurangBurgerBig"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Identitas"
+        android:textSize="@dimen/textSize"
+        android:textColor="@android:color/background_dark"
+        />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+
+        >
+        <EditText
+            android:id="@+id/namaPemesanBurger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama"
+            android:maxLength="50"
+            android:inputType="text"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:counterOverflowTextAppearance="@color/colorPrimaryDark"
+        >
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorPrimaryDark"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="15"
+        >
+
+       <EditText
+           android:id="@+id/noTelp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/nomor_telepon"
+           android:inputType="number"
+           android:maxLength="15"
+           />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        >
+        <EditText
+            android:id="@+id/ketTambahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:hint="@string/keterangan_tambahan"
+            android:inputType="text|textImeMultiLine"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonBurger"
+            android:onClick="pesanBurger"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Pesan"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ProjekIAK</string>
+    <string name="top_10_beautiful_views">Top 10 Beautiful Views</string>
+    <string name="pilih_burger">Pilih Burger</string>
+    <string name="burger_small_rp_25_000">Burger Small (Rp. 25.000;-)</string>
+    <string name="burger_medium_rp_30_000">Burger Medium (Rp. 30.000;-)</string>
+    <string name="burger_big_rp_40_000">Burger Big (Rp. 40.000;-)</string>
+    <string name="pilih">Pilih</string>
+    <string name="keterangan_tambahan" tools:ignore="DuplicateDefinition">Keterangan Tambahan</string>
+    <string name="tambahkan_keterangan_jika_ada">Tambahkan Keterangan Jika Ada</string>
+    <string name="masukkan_nama">masukkan nama</string>
+    <string name="nama">nama</string>
+    <string name="email">email</string>
+    <string name="nomor_telepon">nomor telepon</string>
+    <string name="jml_b">jml b</string>
+    <string name="jml_m">jml m</string>
+    <string name="jml_s">jml s</string>
+</resources>
